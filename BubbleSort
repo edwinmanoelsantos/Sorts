@@ -1,0 +1,32 @@
+import java.util.Arrays;
+
+public class BubbleSort {
+	
+	static int vetor [] = {4, 3, 2, 1};
+	static int aux;
+	
+	public static void Bubble (){
+		for (int i = 0; i < vetor.length - 1; i++){
+			for (int j = 0; j < vetor.length - 1; j++){
+				if (vetor[j] > vetor[j+1]){
+					aux = vetor[j];
+					vetor[j] = vetor[j+1];
+					vetor[j+1] = aux;
+					System.out.println("Ordenando"+Arrays.toString(vetor));
+				}
+				
+			}
+			
+		}
+	}
+	
+	
+	
+
+	public static void main(String[] args) {
+		System.out.println("Desordenado"+Arrays.toString(vetor));
+		Bubble();
+
+	}
+
+}
