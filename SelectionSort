@@ -1,0 +1,35 @@
+import java.util.Arrays;
+
+public class SelectionSort {
+	static int vetor [] = {5, 4, 3, 2, 1};
+	static int aux;
+	static int min;
+	static int tam;
+	
+	public static void selection_sort() 
+	{ 
+	  for (int i = 0; i < vetor.length - 1; i++) 
+	  {
+	     min = i;
+	     for (int j = (i+1); j < vetor.length; j++) {
+	       if(vetor[j] < vetor[min]) 
+	         min = j;
+	     }
+	     System.out.println("Ordenando"+Arrays.toString(vetor));
+	     if (i != min) {
+	       aux = vetor[i];
+	       vetor[i] = vetor[min];
+	       vetor[min] = aux;
+	       
+	     }
+	  }
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Desordenado"+Arrays.toString(vetor));
+		selection_sort();
+		System.out.println("Ordenado"+Arrays.toString(vetor));
+
+	}
+
+}
